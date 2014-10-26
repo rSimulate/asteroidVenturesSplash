@@ -1,0 +1,66 @@
+# submodule libs
+*/py/lib/*
+*/js/lib/*
+
+# .conf file to prevent accidental uploads of user directories and an unintentional edit battle
+*cosmos.conf
+
+# the local databases
+*db/OOIs.js
+*db/owners.js
+
+#PyCharm files
+.idea
+pycharm
+*.iml
+
+# pickle OOI save files
+*.pickle
+
+# ubuntu backup files
+*~
+
+# definitely don't track the .pem
+*.pem
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log
+*.pot
+
+# Sphinx documentation
+docs/_build/
