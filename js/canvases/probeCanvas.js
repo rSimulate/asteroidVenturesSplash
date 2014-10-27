@@ -4,7 +4,7 @@ var ProbeCanvas = function() {
     console.log("Initiating Probe Canvas");
     // set the scene size
     var WIDTH = $(document.body).width() * 0.2,
-        HEIGHT = $(document.body).height() * 0.1;
+        HEIGHT = $(document.body).width() * 0.2;
 
     // set some camera attributes
     var VIEW_ANGLE = 45,
@@ -34,7 +34,7 @@ var ProbeCanvas = function() {
 
         // the camera starts at 0,0,0
         // so pull it back
-        camera.position.z = 10;
+        camera.position.z = 20;
 
         // start the renderer
         renderer.setSize(WIDTH, HEIGHT);

@@ -142,7 +142,7 @@ var CosmosRender = function (cosmosScene, cosmosUI) {
 
     this.onWindowResize = function () {
 
-        var height = $(document.body).height() * 0.3;
+        var height = $(document.body).width() * 0.2;
         var width = $(document.body).width() * 0.3;
         camera.aspect = $(canvas).width() / $(canvas).height();
         farCamera.aspect = $(canvas).width() / $(canvas).height();
