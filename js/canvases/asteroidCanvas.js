@@ -114,4 +114,4 @@ var AsteroidCanvas = function() {
 };
 
 var asteroidCanvas = new AsteroidCanvas();
-AsteroidCanvas.main();
+asteroidCanvas.main();
