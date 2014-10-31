@@ -82,20 +82,23 @@ var AsteroidCanvas = function() {
         scene.add(skybox);
     }
 
-    function generateBlenderMesh(objPath) {
-        // generates blender mesh for webGL from obj file
-        var loader = new THREE.OBJLoader();
+    function generateBlenderMesh(daePath) {
+        var loader = new THREE.ColladaLoader();
+        loader.options.convertUpAxis = true;
 
-        loader.load(objPath, function (object) {
-            var material = new THREE.MeshLambertMaterial( { color: 0x666666 } );
+        // If you had animations, you would add to the second argument function below
+        var obj3d;
+        loader.load(daePath, function (collada) {
+            obj3d = collada.scene;
+            if (obj3d != undefined) {
+                obj3d.scale.x = obj3d.scale.y = obj3d.scale.z = 1;
+                obj3d.updateMatrix();
+                obj3d.rotateOnAxis(new THREE.Vector3(0, 1, 0), Math.PI);
 
-            object.traverse( function ( child ) {
-                if ( child instanceof THREE.Mesh ) {
-                    child.material = material;
-                }
-            } );
-
-            scene.add( object );
+                // add to scene
+                scene.add(obj3d);
+            }
+            else {console.log("ERROR: Parsing blender model failed");}
         });
     }
 
@@ -108,7 +111,7 @@ var AsteroidCanvas = function() {
     this.main = function() {
         AsteroidInit();
         initSkybox();
-        generateBlenderMesh('models/toutatis/hirestoutatis.obj');
+        generateBlenderMesh('models/toutatis/hirestoutatis.dae');
         animate();
     };
 };
