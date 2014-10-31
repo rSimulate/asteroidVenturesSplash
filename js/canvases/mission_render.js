@@ -142,8 +142,8 @@ var CosmosRender = function (cosmosScene, cosmosUI) {
 
     this.onWindowResize = function () {
 
-        var height = $(document.body).height();
-        var width = $(document.body).width();
+        var height = $(document.body).height() * 0.9;
+        var width = $(document.body).width() * 0.9;
         camera.aspect = $(canvas).width() / $(canvas).height();
         farCamera.aspect = $(canvas).width() / $(canvas).height();
         camera.updateProjectionMatrix();
@@ -226,8 +226,8 @@ var CosmosRender = function (cosmosScene, cosmosUI) {
         composer.addPass(finalPass);
 
         // adjust height
-        var height = $(document.body).height();
-        var width = $(document.body).width();
+        var height = $(document.body).height() * 0.9;
+        var width = $(document.body).width() * 0.9;
         renderer.setSize(width, height);
         $('#solarSystem').append(renderer.domElement);
 

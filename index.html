@@ -21,9 +21,17 @@
 	
 	<link rel="prefetch" href="images/zoom.png">
     <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+
+        /* embedded comosium webGL iframe scenes */
+        iframe.cosmosScene{
+            height: 100%;
+            overflow: hidden;
+            align=middle;
+            seamless=true;
+        }
     </style>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -150,7 +158,7 @@
 		</div><!-- /row -->
         <div class="row">
             <div class="col-xs-12">
-                <iframe src="http://mars.asteroid.ventures" width="100%" height="500px" align="middle" seamless>
+                <iframe src="http://mars.asteroid.ventures" class="cosmosScene" height="500px">
                     Your browser does not support our MarsView iframe :-(
                 </iframe>
             </div>
@@ -189,20 +197,20 @@
             <!-- cosmosium webGL canvases -->
             <div class="row">
                 <div class="col-12 col-sm-12">
-                    <iframe src="http://rsimulate.github.io/asteroidVenturesSplash/solarSystem.html" width="100%" height="300px">
+                    <iframe src="http://rsimulate.github.io/asteroidVenturesSplash/solarSystem.html" class="cosmosScene" height="300px">
                         your browser doesn't support iframes :(
                     </iframe>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-sm-6">
-                    <iframe src="http://rsimulate.github.io/asteroidVenturesSplash/asteroidViewer.html" width="100%" height="300px">
+                    <iframe src="http://rsimulate.github.io/asteroidVenturesSplash/asteroidViewer.html" class="cosmosScene" height="300px">
                         your browser doesn't support iframes :(
                     </iframe>
                 </div>
                 <div class="col-12 col-sm-6"
                      webGL render of the New Horizons probe :<br>
-                    <iframe src="http://rsimulate.github.io/asteroidVenturesSplash/probeViewer.html" width="100%" height="300px">
+                    <iframe src="http://rsimulate.github.io/asteroidVenturesSplash/probeViewer.html" class="cosmosScene" height="300px">
                         your browser doesn't support iframes :(
                     </iframe>
                 </div>
