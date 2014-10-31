@@ -3,8 +3,8 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 var ProbeCanvas = function() {
     console.log("Initiating Probe Canvas");
     // set the scene size
-    var WIDTH = $(document).width() * 0.9,
-        HEIGHT = $(document).height() * 0.9;
+    var WIDTH = $(document).width(),
+        HEIGHT = $(document).height();
 
     // set some camera attributes
     var VIEW_ANGLE = 45,
