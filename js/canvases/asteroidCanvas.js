@@ -3,8 +3,8 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 var AsteroidCanvas = function() {
     console.log("Initiating Probe Canvas");
     // set the scene size
-    var WIDTH = $(window).width(),
-        HEIGHT = $(window).height();
+    var WIDTH = $(window).width() * 0.95,
+        HEIGHT = $(window).height() * 0.95;
 
     // set some camera attributes
     var VIEW_ANGLE = 45,

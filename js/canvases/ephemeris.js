@@ -13,7 +13,7 @@ function scale(class_scale, real_scale, ideal_scale) {
     return class_scale * (real_scale * REALNESS + ideal_scale * (1.05 - REALNESS));
 }
 
-var PLANET_SIZE = scale(.7, 1, 50); // = earth size in view scene length units
+var PLANET_SIZE = scale(.1, 1, 50); // = earth size in view scene length units
 var EARTH_SIZE = PLANET_SIZE;
 var LUNA_SIZE = scale(EARTH_SIZE, 0.28, .28);
 
