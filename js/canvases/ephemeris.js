@@ -13,7 +13,7 @@ function scale(class_scale, real_scale, ideal_scale) {
     return class_scale * (real_scale * REALNESS + ideal_scale * (1.05 - REALNESS));
 }
 
-var PLANET_SIZE = scale(.1, 1, 50); // = earth size in view scene length units
+var PLANET_SIZE = scale(.7, 1, 50); // = earth size in view scene length units
 var EARTH_SIZE = PLANET_SIZE;
 var LUNA_SIZE = scale(EARTH_SIZE, 0.28, .28);
 
@@ -55,7 +55,7 @@ var TRITON_SIZE = scale(MOON_SIZE, 0.2010, 0.2010);
 var NEREID_SIZE = scale(MOON_SIZE, 0.0311, 0.0311);
 
 
-// exageration of moonar orbit distances
+// exaggeration of moonar orbit distances
 var ORBIT_DIST    = scale(EARTH_SIZE ,1     ,.1    );
 // specific moon distance adjustments:
 var EARTH_MOON_EXAGGERATION   = scale(ORBIT_DIST,1,EARTH_SIZE);
