@@ -144,12 +144,12 @@ var CosmosRender = function (cosmosScene, cosmosUI) {
 
         var height = $(window).height() * 0.95;
         var width = $(window).width() * 0.95;
+        renderer.setSize(width, height);
+
         camera.aspect = $(canvas).width() / $(canvas).height();
         farCamera.aspect = $(canvas).width() / $(canvas).height();
         camera.updateProjectionMatrix();
         farCamera.updateProjectionMatrix();
-
-        renderer.setSize($(canvas).width(), $(canvas).height());
 
         render();
     };
