@@ -226,8 +226,8 @@ var CosmosRender = function (cosmosScene, cosmosUI) {
         composer.addPass(finalPass);
 
         // adjust height
-        var height = $(document.body).height() * 0.2;
-        var width = $(document.body).width() * 0.5;
+        var height = $(document.body).height();
+        var width = $(document.body).width();
         renderer.setSize(width, height);
         $('#solarSystem').append(renderer.domElement);
 

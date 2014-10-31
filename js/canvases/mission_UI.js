@@ -18,8 +18,8 @@ CosmosUI = function () {
         canvas = $('#solarSystem');
 
         // Configure webGL canvas to conform to parent div
-        height = $(document.body).width() * 0.2;
-        width = $(document.body).width() * 0.3;
+        height = $(document.body).width();
+        width = $(document.body).width();
         aspect = width / height;
         renderer.setSize(width, height);
         camera.aspect = aspect;
