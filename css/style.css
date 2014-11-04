@@ -216,7 +216,7 @@ body {
 }
 
 #slide-1 {
-	background-image: url('../images/bg1.jpg');
+	background-image: url('/img/bg1.jpg');
 	color: #ffffff;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -302,7 +302,7 @@ body {
 }
 
 #slide-2 {
-	background-color: #33AD5C;
+	background-color: #343434;
 	color: #e4e6e5;
 	padding-top: 90px;
 }
@@ -609,4 +609,20 @@ body {
 
 .navigation-slide {
 	cursor: pointer;
+}
+
+
+.hextop{
+	height: inherit;
+	padding-bottom: 5px;
+}
+
+@media (min-width: 768px){}
+.col-sm-4 {
+width: 25%;
+}
+}
+
+.mainvid{
+	margin-left: -12.5%;
 }
