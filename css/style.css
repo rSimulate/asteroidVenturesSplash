@@ -513,6 +513,35 @@ body {
 		display: none;
 		font-size: 20px;
 	}
+	
+
+	#contact-row-B {
+		padding-top: 20px;
+	}
+	
+	#contact-row-B .col-12 {
+		height: 175px;
+		overflow: hidden;
+		padding-top: 20px;
+		transition: all ease-in .5s;
+	}
+	
+	#contact-row-B img {
+		display: block;
+		margin: 0 auto;
+		max-height: 100%;
+		max-width: 100%;
+	}
+	
+	#contact-row-B .col-12:hover {
+		height: 175px;
+		padding-top: 0;
+	}
+	
+	#contact-row-B .col-12 .hover-text {
+		display: none;
+		font-size: 20px;
+	}
 
 #slide-7 {
 	background-color: #e4e6e5;

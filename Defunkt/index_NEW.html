@@ -18,6 +18,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 
+
+
+<script type='text/javascript' src='/js/2440782167-formviewer_prd.js'></script>
+<script type="text/javascript">H5F.setup(document.getElementById('ss-form'));
+          _initFormViewer(
+            "[100,,[[[1443019766,[[2,102,,\x22Please enter a valid email\x22]\n]\n]\n]\n]\n]\n");</script>
+
 	
 	<title>Asteroid Ventures</title>
 	<meta name="description" content="Asteroid Ventures - A game about colonizing the solar system" />	    
@@ -59,6 +66,22 @@
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">-->
+
+
+<script type="text/javascript">
+          /**
+ * @license
+ *! H5F
+ * https://github.com/ryanseddon/H5F/
+ * Copyright (c) Ryan Seddon | Licensed MIT
+ */
+
+(function(e,t){"function"==typeof define&&define.amd?define(t):e.H5F=t()})(this,function(){var e,t,a,i,n,r,s,l,u,o,c,d,v,f,p,m,h,g,b,y,w,C,N,A,E,$,k=document,x=k.createElement("input"),q=/^[a-zA-Z0-9.!#$%&'*+-\/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,M=/[a-z][\-\.+a-z]*:\/\//i,L=/^(input|select|textarea)$/i;return r=function(e,t){var a=!e.nodeType||!1,i={validClass:"valid",invalidClass:"error",requiredClass:"required",placeholderClass:"placeholder"};if("object"==typeof t)for(var r in i)t[r]===void 0&&(t[r]=i[r]);if(n=t||i,a)for(var l=0,u=e.length;u>l;l++)s(e[l]);else s(e)},s=function(a){var i,n=a.elements,r=n.length,s=!!a.attributes.novalidate;if(b(a,"invalid",u,!0),b(a,"blur",u,!0),b(a,"input",u,!0),b(a,"keyup",u,!0),b(a,"focus",u,!0),b(a,"change",u,!0),b(a,"click",o,!0),b(a,"submit",function(i){e=!0,t||s||a.checkValidity()||w(i)},!1),!v())for(a.checkValidity=function(){return c(a)};r--;)i=!!n[r].attributes.required,"fieldset"!==n[r].nodeName.toLowerCase()&&l(n[r])},l=function(e){var t=e,a=g(t),n={type:t.getAttribute("type"),pattern:t.getAttribute("pattern"),placeholder:t.getAttribute("placeholder")},r=/^(email|url)$/i,s=/^(input|keyup)$/i,l=r.test(n.type)?n.type:n.pattern?n.pattern:!1,u=f(t,l),o=m(t,"step"),v=m(t,"min"),h=m(t,"max"),b=!(""===t.validationMessage||void 0===t.validationMessage);t.checkValidity=function(){return c.call(this,t)},t.setCustomValidity=function(e){d.call(t,e)},t.validity={valueMissing:a,patternMismatch:u,rangeUnderflow:v,rangeOverflow:h,stepMismatch:o,customError:b,valid:!(a||u||o||v||h||b)},n.placeholder&&!s.test(i)&&p(t)},u=function(e){var t=C(e)||e,a=/^(input|keyup|focusin|focus|change)$/i,r=/^(submit|image|button|reset)$/i,s=/^(checkbox|radio)$/i,o=!0;!L.test(t.nodeName)||r.test(t.type)||r.test(t.nodeName)||(i=e.type,v()||l(t),t.validity.valid&&(""!==t.value||s.test(t.type))||t.value!==t.getAttribute("placeholder")&&t.validity.valid?(A(t,[n.invalidClass,n.requiredClass]),N(t,n.validClass)):a.test(i)?t.validity.valueMissing&&A(t,[n.requiredClass,n.invalidClass,n.validClass]):t.validity.valueMissing?(A(t,[n.invalidClass,n.validClass]),N(t,n.requiredClass)):t.validity.valid||(A(t,[n.validClass,n.requiredClass]),N(t,n.invalidClass)),"input"===i&&o&&(y(t.form,"keyup",u,!0),o=!1))},c=function(t){var a,i,n,r,s=!1;if("form"===t.nodeName.toLowerCase()){a=t.elements;for(var l=0,o=a.length;o>l;l++)i=a[l],n=!!i.attributes.required,r=!!i.attributes.pattern,"fieldset"!==i.nodeName.toLowerCase()&&(n||r&&n)&&(u(i),i.validity.valid||s||(e&&i.focus(),s=!0));return!s}return u(t),t.validity.valid},d=function(e){var t=this;t.validationMessage=e},o=function(e){var a=C(e);a.attributes.formnovalidate&&"submit"===a.type&&(t=!0)},v=function(){return E(x,"validity")&&E(x,"checkValidity")},f=function(e,t){if("email"===t)return!q.test(e.value);if("url"===t)return!M.test(e.value);if(t){var i=e.getAttribute("placeholder"),n=e.value;return a=RegExp("^(?:"+t+")$"),n===i?!1:""===n?!1:!a.test(e.value)}return!1},p=function(e){var t={placeholder:e.getAttribute("placeholder")},a=/^(focus|focusin|submit)$/i,r=/^(input|textarea)$/i,s=/^password$/i,l=!!("placeholder"in x);l||!r.test(e.nodeName)||s.test(e.type)||(""!==e.value||a.test(i)?e.value===t.placeholder&&a.test(i)&&(e.value="",A(e,n.placeholderClass)):(e.value=t.placeholder,b(e.form,"submit",function(){i="submit",p(e)},!0),N(e,n.placeholderClass)))},m=function(e,t){var a=parseInt(e.getAttribute("min"),10)||0,i=parseInt(e.getAttribute("max"),10)||!1,n=parseInt(e.getAttribute("step"),10)||1,r=parseInt(e.value,10),s=(r-a)%n;return g(e)||isNaN(r)?"number"===e.getAttribute("type")?!0:!1:"step"===t?e.getAttribute("step")?0!==s:!1:"min"===t?e.getAttribute("min")?a>r:!1:"max"===t?e.getAttribute("max")?r>i:!1:void 0},h=function(e){var t=!!e.attributes.required;return t?g(e):!1},g=function(e){var t=e.getAttribute("placeholder"),a=/^(checkbox|radio)$/i,i=!!e.attributes.required;return!(!i||""!==e.value&&e.value!==t&&(!a.test(e.type)||$(e)))},b=function(e,t,a,i){E(window,"addEventListener")?e.addEventListener(t,a,i):E(window,"attachEvent")&&window.event!==void 0&&("blur"===t?t="focusout":"focus"===t&&(t="focusin"),e.attachEvent("on"+t,a))},y=function(e,t,a,i){E(window,"removeEventListener")?e.removeEventListener(t,a,i):E(window,"detachEvent")&&window.event!==void 0&&e.detachEvent("on"+t,a)},w=function(e){e=e||window.event,e.stopPropagation&&e.preventDefault?(e.stopPropagation(),e.preventDefault()):(e.cancelBubble=!0,e.returnValue=!1)},C=function(e){return e=e||window.event,e.target||e.srcElement},N=function(e,t){var a;e.className?(a=RegExp("(^|\\s)"+t+"(\\s|$)"),a.test(e.className)||(e.className+=" "+t)):e.className=t},A=function(e,t){var a,i,n="object"==typeof t?t.length:1,r=n;if(e.className)if(e.className===t)e.className="";else for(;n--;)a=RegExp("(^|\\s)"+(r>1?t[n]:t)+"(\\s|$)"),i=e.className.match(a),i&&3===i.length&&(e.className=e.className.replace(a,i[1]&&i[2]?" ":""))},E=function(e,t){var a=typeof e[t],i=RegExp("^function|object$","i");return!!(i.test(a)&&e[t]||"unknown"===a)},$=function(e){for(var t=document.getElementsByName(e.name),a=0;t.length>a;a++)if(t[a].checked)return!0;return!1},{setup:r}});
+
+
+
+        </script>
+
   </head>
 
   
@@ -81,8 +104,8 @@
 					<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon icon-book"></span> <span class="text">ABOUT</span></a></li>
 					<li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#slide-3" title="Next Section"><span class="icon icon-sitemap"></span> <span class="text">MOCKUPS</span></a></li>
 					<li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon icon-gears"></span> <span class="text">GAMEPLAY</span></a></li>
-					<li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#slide-5" title="Next Section"><span class="icon icon-group"></span> <span class="text">FOLLOW</span></a></li>
-					<li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">JOIN US</span></a></li>
+					<li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#slide-5" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">FOLLOW</span></a></li>
+					<li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon icon-group"></span> <span class="text">JOIN US</span></a></li>
 				</ul>
 				<div class="row">
 					<div class="col-sm-2 active-menu"></div>
@@ -106,10 +129,7 @@
 		<div class="container">
 			<div id="home-row-1" class="row clearfix">
 				<div class="col-12">
-				<div>
-					<img style="margin-left: -4%; width: 45%; height: auto;" src="img/AVlogo.png">
-				</div>
-					<!--h1 class="font-semibold">ASTEROID VENTURES </h1-->
+					<h1 class="font-semibold">ASTEROID VENTURES </h1>
 					<h4 class="font-thin">
                         A <span class="font-semibold">4x strategy</span> game based on <span class="font-semibold">hard science</span>
                         <br>and mankind's near future <span class="font-semibold">among the stars.</span>
@@ -159,17 +179,8 @@
 
 
 			<div class="row subtitle-row">
-				<div class="col-12 font-thin">We're looking to use real <a href="http://esa.github.io/pykep/">Astrodynamics</a> to calculate mission launch windows and energy costs, but from a user-friendly UI.
-
-			<div>
-				<img style="margin-left: -4%; height: 530px;" src="img/office.png">
-			</div>
-				
-				<p style="font-size: 75%;">
-				Where <span class="font-semibold">Kerbal Space Program</span> might inspire the next <span class="font-semibold">Werner Von Braun</span>, we're hoping to provide vision for the next generation of <span class="font-semibold">Space CEO's and Civil Leaders!</span>
-</p><p>
-				There are <span class="font-semibold">countless fortunes in space, let's go make them!</span>
-				</p>
+				<div class="col-12 font-thin">We've also used the <a href="http://esa.github.io/pykep/">PyKEP Astrodynamics library</a> to calculate mission launch windows and energy costs. 
+				<br>(Although we're still working on a universal solver)
 			    </div>
 			</div><!-- /row -->
 
@@ -247,7 +258,7 @@
 		    </div>
                     <p style="font-size: 75%;">
                         Work on <span class="font-semibold">Asteroid Ventures</span> started as an open source simulation project for the <a href="https://2014.spaceappschallenge.org/project/cosmosium/">NASA 2014 Space Apps Challenge</a>. This project later recieved funding from <a href="http://www.spacegambit.org/">SpaceGambit</a>, to expand the capabilities of our project. Originally called <a href="https://github.com/rsimulate/cosmosium">Cosmosium,</a> we have since switched from ThreeJS to Unreal Engine 4. This allows for faster iteration of development and more immersive graphics.
-					</p>
+</p>
             <div>
 			<img style="margin-left: -7%; height: 330px;" src="img/UE4.png">
 		    </div>
@@ -262,10 +273,55 @@
                         With a focus on building a <span class="font-semibold">production chain</span> in space or controlling trade through <span class="font-semibold">Orbit Cyclers</span>, players must <span class="font-semibold">think tactically</span> about <span class="font-semibold">technology, policy and prospecting.</span> In addition, the interplay between <span class="font-semibold">private companies, national agencies, and new space-based sovereignties</span> will play out by struggling to control <span class="font-semibold">trade-routes and territory</span> by means of <span class="font-semibold">shareholder buyouts, embargoes, piracy and sabotage!</span>
             </p>
 
+			<p style="font-size: 75%;">
+                        Stay tuned to find out more, as the design develops. Subscribe with your email below, and be sure to follow our blog and social media pages!
+            </p>
+            <br>
+
+
+
+
             </div>
 
             <div class="col-sm-1 hidden-sm">&nbsp;</div>
-
+			<div class="row content-row">
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+				<div class="col-12 col-sm-2">
+					<p><i class="icon icon-code"></i></p>
+					<h2 class="font-thin">Code for <br><span class="font-semibold" >The Web</span></h2>
+					<h4 class="font-thin">
+					    Javascript front end, Python light webstack to run the server
+                    </h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-sm-2">
+					<p><i class="icon icon-cloud"></i></p>
+					<h2 class="font-thin">Cloud & VM<br><span class="font-semibold">Deployment</span></h2>
+					<h4 class="font-thin">
+					    Clone our source and get your game server up in minutes!
+                    </h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-sm-2">
+					<p><i class="icon icon-html5"></i></p>
+					<h2 class="font-thin">HTML5 with<br><span class="font-semibold">WebGL</span></h2>
+					<h4 class="font-thin">
+					    Built with responsive design and the ThreeJS WebGL
+					</h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-sm-2">
+					<p><i class="icon icon-github-alt"></i></p>
+					<h2 class="font-thin">Github<br><span class="font-semibold">Repositories</span></h2>
+					<h4 class="font-thin">
+					    Open source code will grow with new contributors
+					</h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-sm-2">
+					<p><i class="icon icon-tasks"></i></p>
+					<h2 class="font-thin">Real-Time <br><span class="font-semibold">Messaging</span></h2>
+					<h4 class="font-thin">
+					    WebSockets reduce latency by syncing server & clients
+					</h4>
+				</div><!-- /col12 -->
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
 			</div><!-- /row -->
 		</div><!-- /container -->
 	</div><!-- /slide4 -->
@@ -278,49 +334,47 @@
 			</div><!-- /row -->
 			<div class="row line-row">
 				<div class="hr">&nbsp;</div>
-
-			<div class="row subtitle-row">
-			<p style="font-size: 75%;">
-                        The gameplay is going to be <span class="font-semibold">out of this world!</span> Stay tuned to find out more, as the design develops. <span class="font-semibold">Subscribe with your email below,</span> and be sure to <span class="font-semibold">follow our blog and social media pages!</span>
-            </p>
-			</div>
 			</div><!-- /row -->
+
+
+
 			
-			<div class="row subtitle-row">
-			<p style="font-size: 75%;">
-			We are <span class="font-semibold">all over the web</span>, follow us wherever you can to <span class="font-semibold">show support! </span>
-				</p></div>
-		
 			<div id="contact-row-4" class="row">
 				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-				<div class="col-12 col-sm-2 with-hover-text">
-					<p><a target="_blank" href="https://www.facebook.com/asteroid.ventures"><i class="icon icon-facebook"></i></a></p>
-					<span class="hover-text font-light ">Facebook Group</span></a>
-				</div><!-- /col12 -->
 				<div class="col-12 col-sm-2 with-hover-text">
 					<p><a href="http://www.reddit.com/r/asteroidVentures" target="_blank"><i class="icon icon-reddit"></i></a></p>
 					<span class="hover-text font-light ">/r/asteroidVentures</span></a>
 				</div><!-- /col12 -->
 				<div class="col-12 col-sm-2 with-hover-text">
+					<p><a href="mailto:contact@rsimulate.com?Subject=Asteroid%20Ventures%20Inquiry" target="_top"><i class="icon icon-envelope"></i></a></p>
+					<span class="hover-text font-light ">contact@rsimulate.com</span></a>
+				</div><!-- /col12 -->
+				<div class="col-12 col-sm-2 with-hover-text">
 					<p><a target="_blank" href="http://rsimulate.com"><i class="icon icon-wordpress"></i></a></p>
-					<span class="hover-text font-light ">Company Blog</span></a>
+					<span class="hover-text font-light ">Our Blog</span></a>
 				</div><!-- /col12 -->
 				<div class="col-12 col-sm-2 with-hover-text">
-					<p><a target="_blank" href="https://twitter.com/asteroidV"><i class="icon icon-twitter"></i></a></p>
-					<span class="hover-text font-light ">Twitter Profile</span></a>
+					<p><a target="_blank" href="https://www.facebook.com/asteroid.ventures"><i class="icon icon-facebook"></i></a></p>
+					<span class="hover-text font-light ">Facebook Group</span></a>
 				</div><!-- /col12 -->
 				<div class="col-12 col-sm-2 with-hover-text">
-					<p><a target="_blank" href="https://www.youtube.com/channel/UCBt3783Rj6NvTNWJvvOdZbg"><i class="icon icon-youtube"></i></a></p>
-					<span class="hover-text font-light ">Youtube Channel</span></a>
+					<p><a target="_blank" href="https://github.com/rSimulate"><i class="icon icon-github"></i></a></p>
+					<span class="hover-text font-light ">rSimulate Github</span></a>
 				</div><!-- /col12 -->
 				<div class="col-sm-1 hidden-sm">&nbsp;</div>
 			</div><!-- /row -->
 			
+			<div class="row subtitle-row">
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+				<div class="col-12 col-sm-10 font-light">We are <span class="font-semibold">all over the web</span>, and are always open for conversation! <span class="font-semibold">Come find us! Come join!</span></div>
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+			</div><!-- /row -->
 			
-		</div><!-- /container -->
 	</div><!-- /slide5 -->
+	</div>
 	
-		<div class="slide story" id="slide-6" data-slide="6">
+	<!-- === Slide 6 / Contact === -->
+	<div class="slide story" id="slide-6" data-slide="6">
 		<div class="container">
 			<div class="row title-row">
 				<div class="col-12 font-thin">We're looking for <span class="font-semibold">Partners!</span></div>
@@ -340,98 +394,29 @@
                 </h3>
 
 				<p>
-					<p style="font-size: 75%;">
-						We are currently looking for <span class="font-semibold">CONTRIBUTORS LIKE YOU!</span> Can you help us with the following or anything else?
-					</p>
+				<span class="font-semibold">Please</span>, if you are interested in <span class="font-semibold">helping, discussing, collaborating, or funding us,</span> reach out and <a href="mailto:contact@rsimulate.com?Subject=MetaSim%20Inquiry" target="_top">contact us!</a></span>
 				</p>
 				</div>
 				<div class="col-sm-1 hidden-sm">&nbsp;</div>
 
 			</div><!-- /row -->
-
+			
 			<div class="row content-row">
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-				<div class="col-12 col-sm-2">
-					<p><i class="icon icon-code"></i></p>
-					<h2 class="font-thin">Code for <br><span class="font-semibold" >The Future</span></h2>
-					<h4 class="font-thin">
-					    Unreal Engine 4, custom C++, custom shaders, we need you! 
-                    </h4>
-				</div><!-- /col12 -->
-				<div class="col-12 col-sm-2">
-					<p><i class="icon icon-moon"></i></p>
-					<h2 class="font-thin">Shoot for <br><span class="font-semibold">The MOON!</span></h2>
-					<h4 class="font-thin">
-					    We need nerdy environment artists & space experts
-                    </h4>
-				</div><!-- /col12 -->
-				<div class="col-12 col-sm-2">
-					<p><i class="icon icon-briefcase"></i></p>
-					<h2 class="font-thin">Stellar<br><span class="font-semibold">Investors</span></h2>
-					<h4 class="font-thin">
-					    Fast-track this project with capital, expect high ROI
-					</h4>
-				</div><!-- /col12 -->
-				<div class="col-12 col-sm-2">
-					<p><i class="icon icon-rocket"></i></p>
-					<h2 class="font-thin">Draft your<br><span class="font-semibold">Masterpiece!</span></h2>
-					<h4 class="font-thin">
-					    3D Asset Modellers, Vector Artists, Sound Production
-					</h4>
-				</div><!-- /col12 -->
-				<div class="col-12 col-sm-2">
-					<p><i class="icon icon-tasks"></i></p>
-					<h2 class="font-thin">Real-Time <br><span class="font-semibold">Multiplayer</span></h2>
-					<h4 class="font-thin">
-					    Seeking experienced game network engineer, PWN some sockets
-					</h4>
-				</div><!-- /col12 -->
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-			</div>
-			
-			<div class="row subtitle-row">
-			<span class="font-semibold">Please</span>, if you are interested in <span class="font-semibold">helping, discussing, collaborating, or funding us,</span> reach out and <a href="mailto:contact@rsimulate.com?Subject=MetaSim%20Inquiry" target="_top"><span class="font-semibold">contact us!</span></a></span>
-			</div>
-			
-			
-			<div id="contact-row-B" class="row">
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-				<div class="col-12 col-sm-2 with-hover-text">
-					<p><a href="mailto:contact@rsimulate.com?Subject=Asteroid%20Ventures%20Inquiry" target="_top"><i class="icon icon-envelope"></i></a></p>
-					<span class="hover-text font-light ">contact@rsimulate.com</span></a>
-				</div><!-- /col12 -->
-				<div class="col-12 col-sm-2 with-hover-text">
-					<p><a target="_blank" href="mailto:iontom@gmail.com"><i class="icon icon-google-plus-sign"></i></a></p>
-					<span class="hover-text font-light ">Our Blog</span></a>
-				</div><!-- /col12 -->
-				<div class="col-12 col-sm-2 with-hover-text">
-					<p><a target="_blank" href="skype:iontom@live.com?call"><i class="icon icon-skypeA"></i></a></p>
-					<span class="hover-text font-light ">Skype</span></a>
-				</div><!-- /col12 -->
-				<div class="col-12 col-sm-2 with-hover-text">
-					<p><a target="_blank" href="mailto:iontom@gmail.com"><i class="icon icon-weibo"></i></a></p>
-					<span class="hover-text font-light ">Weibo</span></a>
-				</div><!-- /col12 -->
-				<div class="col-12 col-sm-2 with-hover-text">
-					<p><a target="_blank" href="https://github.com/rSimulate"><i class="icon icon-github"></i></a></p>
-					<span class="hover-text font-light ">rSimulate Github</span></a>
-				</div><!-- /col12 -->
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-			</div><!-- /row -->
-			
-			
-			<!-- div class="row content-row">
 				<div class="col-1 col-sm-1 hidden-sm">&nbsp;</div>
 				<div class="col-12 col-sm-2"><img src="img/client01.png" alt=""></div>
 				<div class="col-12 col-sm-2"><img src="img/client02.png" alt=""></div>
 				<div class="col-12 col-sm-2"><img src="img/client03.png" alt=""></div>
 				<div class="col-12 col-sm-2"><img src="img/client04.png" alt=""></div>
-				<div class="col-12 col-sm-2"><img src="images/client04.png" alt=""></div>
+				<!--<div class="col-12 col-sm-2"><img src="images/client04.png" alt=""></div>-->
 				<div class="col-12 col-sm-2"><img src="img/client05.png" alt=""></div>
 				<div class="col-1 col-sm-1 hidden-sm">&nbsp;</div>
-			</div-->
+			</div><!-- /row -->
 		</div><!-- /container -->
 
+			
+
+			
+		</div><!-- /container -->
 	</div><!-- /Slide 6 -->
 	
 </body>
@@ -464,5 +449,10 @@ $(document).ready(function(e) {
 
 });
 </script>
+
+<script type='text/javascript' src='/js/2440782167-formviewer_prd.js'></script>
+<script type="text/javascript">H5F.setup(document.getElementById('ss-form'));
+          _initFormViewer(
+            "[100,,[[[1443019766,[[2,102,,\x22Please enter a valid email\x22]\n]\n]\n]\n]\n]\n");</script>
 
 </html>
