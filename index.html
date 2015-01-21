@@ -64,35 +64,6 @@ content="A 4x strategy game based on hard science and mankind's near future amon
 			width: 100vw;
 		}
     </style>
-	<script>
-	$(function () {
-		setIFrameSize();
-		$(window).resize(function () {
-			setIFrameSize();
-		});
-	});
-
-	function setIFrameSize() {
-		var ogWidth = 1280;
-		var ogHeight = 720;
-		var ogRatio = ogWidth / ogHeight;
-
-		var windowWidth = $(window).width();
-		if (windowWidth < 480) {
-			var parentDivWidth = $(".vid-iframe-class").parent().width();
-			var newHeight = (parentDivWidth / ogRatio);
-			$(".vid-iframe-class").addClass("iframe-class-resize");
-			$(".iframe-class-resize").css("width", parentDivWidth);
-			$(".iframe-class-resize").css("height", newHeight);
-		} else {
-			// $(".iframe-class-resize").removeAttr("width");
-			// $(".iframe-class-resize").removeAttr("height");
-			$(".vid-iframe-class").removeClass("iframe-class-resize");
-		}
-	}
-	
-
-</script>
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -490,8 +461,8 @@ content="A 4x strategy game based on hard science and mankind's near future amon
 <script type="text/javascript" src="fancybox/jquery.fancybox.pack-v=2.1.5.js"></script>
 <script src="js/script.js"></script>
 
-<!-- fancybox init -->
 <script>
+// fancybox init
 $(document).ready(function(e) {
     var lis = $('.nav > li');
     menu_focus( lis[0], 1 );
@@ -506,8 +477,34 @@ $(document).ready(function(e) {
             }
         }
     });
-
 });
+
+// iframe sizing
+$(function () {
+    setIFrameSize();
+    $(window).resize(function () {
+        setIFrameSize();
+    });
+});
+
+function setIFrameSize() {
+    var ogWidth = 1280;
+    var ogHeight = 720;
+    var ogRatio = ogWidth / ogHeight;
+
+    var windowWidth = $(window).width();
+    if (windowWidth < 480) {
+        var parentDivWidth = $(".vid-iframe-class").parent().width();
+        var newHeight = (parentDivWidth / ogRatio);
+        $(".vid-iframe-class").addClass("iframe-class-resize");
+        $(".iframe-class-resize").css("width", parentDivWidth);
+        $(".iframe-class-resize").css("height", newHeight);
+    } else {
+        // $(".iframe-class-resize").removeAttr("width");
+        // $(".iframe-class-resize").removeAttr("height");
+        $(".vid-iframe-class").removeClass("iframe-class-resize");
+    }
+}
 </script>
 
 </html>
