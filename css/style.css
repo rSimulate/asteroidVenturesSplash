@@ -238,13 +238,12 @@ body {
 
 @media (max-width: 991px) {
 	#slide-1 {
-		background-position: -70% 0, 170% 0;
 	}
 }
 
 @media (max-width: 767px) {
 	#slide-1 {
-		background-image: none;
+		background-image: url('../img/bg1.jpg');
 	}
 }
 
@@ -642,9 +641,16 @@ body {
 
 
 .hextop{
-	height: inherit;
-	padding-bottom: 5px;
+	padding: 12px;
+	width: 92%;
+	height: auto;
+	margin-top: -20%;
 }
+
+@media (max-width: 700px){
+.hextop{
+	display: none;
+}}
 
 @media (min-width: 768px){}
 .col-sm-4 {

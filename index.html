@@ -46,20 +46,53 @@ content="A 4x strategy game based on hard science and mankind's near future amon
 	
 	<link rel="prefetch" href="images/zoom.png">
     <style>
-        <!--body {
-            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-        }
-
-        /* embedded comosium webGL iframe scenes */
-        iframe.cosmosScene{
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
-            align=middle;
-            seamless=true;
-        }-->
+	
+		.vid-container {
+			width: 100%;
+			height: 720px;
+			margin-left: 6.5%;
+		}
+		.vid-iframe-class {
+			width: 100%;
+			height: 100%;
+			border: 0px;
+			overflow: auto;
+		}
+		
+		.imageBox{
+			height: auto;
+			width: 100vw;
+		}
     </style>
+	<script>
+	$(function () {
+		setIFrameSize();
+		$(window).resize(function () {
+			setIFrameSize();
+		});
+	});
 
+	function setIFrameSize() {
+		var ogWidth = 1280;
+		var ogHeight = 720;
+		var ogRatio = ogWidth / ogHeight;
+
+		var windowWidth = $(window).width();
+		if (windowWidth < 480) {
+			var parentDivWidth = $(".vid-iframe-class").parent().width();
+			var newHeight = (parentDivWidth / ogRatio);
+			$(".vid-iframe-class").addClass("iframe-class-resize");
+			$(".iframe-class-resize").css("width", parentDivWidth);
+			$(".iframe-class-resize").css("height", newHeight);
+		} else {
+			// $(".iframe-class-resize").removeAttr("width");
+			// $(".iframe-class-resize").removeAttr("height");
+			$(".vid-iframe-class").removeClass("iframe-class-resize");
+		}
+	}
+	
+
+</script>
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -145,15 +178,16 @@ content="A 4x strategy game based on hard science and mankind's near future amon
 				<div class="col-12 font-thin">
                     <p>Live out the most pivotal century in mankind's history
                     </p>
-
-						<iframe style="margin-left: -12.5%;" width="1280" height="720" src="//www.youtube.com/embed/sIr39gYrhpQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-
+					<div class="vid-container">
+						<iframe class="vid-iframe-class" style="margin-left: -12.5%;" width="1280" height="720" src="//www.youtube.com/embed/sIr39gYrhpQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+					</div>
+					
 					How will you guide the evolution of human culture as it spreads across the solar system and beyond?
                 </div>
 			</div><!-- /row -->
 			
 			<div>
-				<img style="margin-left: -7%; height: 330px;" src="img/ast_belt.png">
+				<img style="margin-left: -7%; width: 95%; height: auto;" src="img/ast_belt.png">
 			</div>
 
 			<div class="row subtitle-row">
@@ -162,7 +196,7 @@ content="A 4x strategy game based on hard science and mankind's near future amon
 			</div><!-- /row -->
 
 			<div>
-				<img style="margin-left: -4%; height: 530px;" src="img/ast_data.png">
+				<img style="margin-left: -4%; width: 95%; height: auto;" src="img/ast_data.png">
 			</div>
 			
 			<div class="col-12 font-thin">(Asteroids plotted by eccentricity and inclination)</div>
@@ -173,7 +207,7 @@ content="A 4x strategy game based on hard science and mankind's near future amon
 				<div class="col-12 font-thin">We're looking to use real <a href="http://esa.github.io/pykep/">Astrodynamics</a> to calculate mission launch windows and energy costs, but from a user-friendly UI.
 
 			<div>
-				<img style="margin-left: -4%; height: 530px;" src="img/office.png">
+				<img style="margin-left: -4%; width: 95%; height: auto;" src="img/office.png">
 			</div>
 				
 				<p style="font-size: 75%;">
@@ -254,20 +288,20 @@ content="A 4x strategy game based on hard science and mankind's near future amon
                       Players in <span class="font-semibold">Asteroid Ventures</span> will be able to <span class="font-semibold">explore and colonize the solar system,</span> or prepare ships to discover what lies beyond.
                     </p>
 		    <div>
-			<img style="margin-left: -7%; height: 330px;" src="img/solsys.png">
+			<img style="margin-left: -4%; width: 95%; height: auto;" src="img/solsys.png">
 		    </div>
                     <p style="font-size: 75%;">
                         Work on <span class="font-semibold">Asteroid Ventures</span> started as an open source simulation project for the <a href="https://2014.spaceappschallenge.org/project/cosmosium/">NASA 2014 Space Apps Challenge</a>. This project later recieved funding from <a href="http://www.spacegambit.org/">SpaceGambit</a>, to expand the capabilities of our project. Originally called <a href="https://github.com/rsimulate/cosmosium">Cosmosium,</a> we have since switched from ThreeJS to Unreal Engine 4. This allows for faster iteration of development and more immersive graphics.
 					</p>
             <div>
-			<img style="margin-left: -7%; height: 330px;" src="img/UE4.png">
+			<img style="margin-left: -4%; width: 95%; height: auto;" src="img/UE4.png">
 		    </div>
 		    <p style="font-size: 75%;">
 
                         Players will <span class="font-semibold">colonize the Moon</span>, setup <span class="font-semibold">large space stations</span>, gain a <span class="font-semibold">foothold on Mars</span>, capture <span class="font-semibold">Near-Earth Asteroids</span> and create infrastrure in the <span class="font-semibold">Main Asteroid Belt.</span> Some daring souls might even send <span class="font-semibold">derigibles to Venus and the gas giants!</span></p>
             
 		    <div>
-			<img style="margin-left: -7%; height: 330px;" src="img/places.png">
+			<img style="margin-left: -4%; width: 95%; height: auto;" src="img/places.png">
 		    </div>
             <p style="font-size: 75%;">
                         With a focus on building a <span class="font-semibold">production chain</span> in space or controlling trade through <span class="font-semibold">Orbit Cyclers</span>, players must <span class="font-semibold">think tactically</span> about <span class="font-semibold">technology, policy and prospecting.</span> In addition, the interplay between <span class="font-semibold">private companies, national agencies, and new space-based sovereignties</span> will play out by struggling to control <span class="font-semibold">trade-routes and territory</span> by means of <span class="font-semibold">shareholder buyouts, embargoes, piracy and sabotage!</span>
