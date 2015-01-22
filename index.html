@@ -303,39 +303,21 @@ content="A 4x strategy game based on hard science and mankind's near future amon
 			</div><!-- /row -->
 			
 			<div class="formBOX">
+			<form role="form" method="POST" action="./newUser" name="newUserForm" id="newUserForm" style="position: relative; top:0px;left:0px; opacity: 1.0;">
+				<div class="modal-body black-font">
+					<div class="modal-body-form form-div form-signin">
+						<div class="form-group">
+							 <h4 class="form-signin-heading">Sign-up for Updates!</h4>
 
-				<div class="ss-form"><form action="https://docs.google.com/forms/d/1QvnTfpxR-POzX5S1CJX_vixrQc0Qx_XNIEgJsNGxHvc/formResponse" method="POST" id="ss-form" target="_blank" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
-					<div class="ss-form-question errorbox-good" role="listitem">
-					<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
-					<label class="ss-q-item-label" for="entry_454919485"><div class="ss-q-title">Name
+							<input type="text" class="form-control top-buffer-sm" placeholder="Username" name="username" required autofocus></input><br>
+							<input type="email" class="form-control top-buffer-sm" placeholder="Email" name="email" required autofocus></input>
+						</div>
 					</div>
-					<input type="text" name="entry.454919485" value="" class="ss-q-short" id="entry_454919485" dir="auto" aria-label="Name Name " title="">
-					<div class="error-message" id="213092870_errorMessage"></div>
-					</div></div></div> 
-					
-					<div class="ss-form-question errorbox-good" role="listitem">
-					<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
-					<label class="ss-q-item-label" for="entry_1443019766"><div class="ss-q-title">E-mail
-					<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-					</div>
-					<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-					
-					<br>
-					<input type="email" name="entry.1443019766" value="" class="ss-q-short" id="entry_1443019766" dir="auto" aria-label="What is your email?  Please enter a valid email" aria-required="true" required="" title="Please enter a valid email">
-					<div class="error-message" id="1723308059_errorMessage">Please enter a valid email</div>
-					</div></div></div>
-					<input type="hidden" name="draftResponse" value="[,,&quot;844381630482373882&quot;]
-					">
-					<input type="hidden" name="pageHistory" value="0">
-
-
-					<input type="hidden" name="fbzx" value="844381630482373882">
-
-					<div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
-					<input type="submit" name="submit" value="Subscribe" id="ss-submit" class="jfk-button jfk-button-action ">
-					</td>
-					</tr></tbody></table></div></ol></form></div>
-				
+				</div>
+				<div class="modal-footer">
+					<button id="createUserSubmit" type="submit" class="btn btn-primary">Subscribe</button>
+				</div>
+			</form>
 			</div>
 			
 			<div class="row subtitle-row">
